@@ -1,0 +1,15 @@
+# JLCPCB order files (tools/jlcpcb_export.py) and archives
+production/
+*.zip
+# 3D models fetched from EasyEDA (see README)
+Library.3dshapes/
+# KiCad: lock files, caches, per-user settings and backups
+*.lck
+fp-info-cache
+*.kicad_prl
+*-backups/
+\#auto_saved_files\#
+_autosave-*
+# misc
+trash/
+.DS_Store
