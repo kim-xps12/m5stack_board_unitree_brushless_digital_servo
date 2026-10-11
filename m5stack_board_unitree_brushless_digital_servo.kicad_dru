@@ -16,6 +16,11 @@
 (rule "JLCPCB: copper clearance 0.15 mm (minimum 0.10 mm)"
 	(constraint clearance (min 0.15mm)))
 
+# A clearance rule also sets the pour clearance; keep the zones' own 0.5 mm when they are refilled
+(rule "Copper pour clearance 0.5 mm"
+	(condition "A.Type == 'Zone' || B.Type == 'Zone'")
+	(constraint clearance (min 0.5mm)))
+
 (rule "JLCPCB: hole to hole 0.45 mm (pads; vias 0.2 mm)"
 	(constraint hole_to_hole (min 0.45mm)))
 
