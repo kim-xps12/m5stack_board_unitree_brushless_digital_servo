@@ -29,7 +29,7 @@ KICAD_CLI = os.environ.get('KICAD_CLI', '/Applications/KiCad/KiCad.app/Contents/
 
 # LCSC part -> (rotation to add [deg, CCW], JLCPCB origin in KiCad footprint coordinates [mm])
 CORRECTION = {
-    'C553814': (180, (0, 0)),      # RB751V40 SOD-323; JLCPCB numbers the anode as pin 1, cathode mark on the right
+    'C7502691': (0, (0, 0)),       # RB751V-40 (hongjiacheng) SOD-323; pin 1 = cathode on the left, as in KiCad
     'C7835': (180, (0, 0)),        # SN74LVC1G14DBVR   SOT-23-5
     'C7834': (180, (0, 0)),        # SN74LVC1G126DBVR  SOT-23-5
     'C23654': (270, (0, 0)),       # SN74LVC1G125DBVR  SOT-23-5, drawn pin 1 bottom-left
