@@ -21,6 +21,7 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 
 - `check_all.sh` は次を順に実行する。
   - DRC (回路図との整合を含む)、ERC
+  - 全部品の全ピンのネットとピンの機能、LCSC 番号、コネクタのシルクの位置 (`tools/checks/pincheck.py` の仕様表と照合)
   - ベタの塗り直し漏れ、ビアによるベタの出っ張り、取り付け穴まわりの銅
   - JLCPCB の発注ファイルの出力 (`tools/jlcpcb_export.py`)
   - CPL の照合 (`work/jlc/` があるときだけ)
@@ -38,6 +39,7 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 - **作業用のスクリプトと中間ファイル**: `work/` に置く。
 - **部品を足すとき**: フットプリントは `Library.pretty` にコピーしてシルクの線幅を 0.15 mm にしたものを使う。`LCSC` フィールドに品番を入れる。
 - **品番やフットプリントを変えたら**: `tools/jlcpcb_export.py` の `CORRECTION` を求め直す (`docs/design.md` §5)。
+- **部品、ピン配置、ネットを意図して変えたら**: `tools/checks/pincheck.py` の仕様表 (`SPEC`) も、データシートを見て直す。今の状態から写さない。
 - **DRC と ERC**: 警告も含めて 0 件を保つ。
 - **`check_all.sh` では見つけられない制約**: 守るか、変えるならユーザに確認する。
   - 部品本体 (F.Fab) を基板端から 2.5 mm 以上離す。

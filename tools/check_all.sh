@@ -30,6 +30,9 @@ echo "== ERC"
 $KC sch erc --severity-all --exit-code-violations -o "$OUT/erc.rpt" $N.kicad_sch >/dev/null 2>&1 || fail=1
 grep "ERC" "$OUT/erc.rpt" | tail -1
 
+echo "== pin assignment of every part (schematic and board), LCSC, connector labels"
+check pincheck tools/checks/pincheck.py $N.kicad_pcb $N.kicad_sch
+
 echo "== zone fills saved = fresh refill"
 check fillcheck tools/checks/fillcheck.py $N.kicad_pcb
 
