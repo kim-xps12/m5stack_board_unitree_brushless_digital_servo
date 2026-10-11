@@ -1,0 +1,32 @@
+(version 1)
+# JLCPCB 2-layer, 1 oz copper: recommended values (https://jlcpcb.com/capabilities/pcb-capabilities)
+
+(rule "JLCPCB: PTH annular ring 0.25 mm (recommended; absolute minimum 0.18 mm)"
+	(condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+	(constraint annular_width (min 0.25mm)))
+
+(rule "JLCPCB: via annular ring 0.075 mm (via diameter >= hole + 0.15 mm)"
+	(condition "A.Type == 'Via'")
+	(constraint annular_width (min 0.075mm)))
+
+(rule "JLCPCB: track width 0.15 mm (minimum 0.10 mm)"
+	(condition "A.Type == 'Track'")
+	(constraint track_width (min 0.15mm)))
+
+(rule "JLCPCB: copper clearance 0.15 mm (minimum 0.10 mm)"
+	(constraint clearance (min 0.15mm)))
+
+(rule "JLCPCB: hole to hole 0.45 mm (pads; vias 0.2 mm)"
+	(constraint hole_to_hole (min 0.45mm)))
+
+(rule "JLCPCB: copper to board edge 0.3 mm (minimum 0.2 mm)"
+	(constraint edge_clearance (min 0.3mm)))
+
+(rule "JLCPCB: silkscreen text 1.0 mm high, 0.15 mm stroke"
+	(layer "?.Silkscreen")
+	(constraint text_height (min 1.0mm))
+	(constraint text_thickness (min 0.15mm)))
+
+(rule "JLCPCB: pad to silkscreen 0.15 mm"
+	(layer "?.Silkscreen")
+	(constraint silk_clearance (min 0.15mm)))
