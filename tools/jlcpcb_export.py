@@ -33,7 +33,7 @@ CORRECTION = {
     'C7835': (180, (0, 0)),        # SN74LVC1G14DBVR   SOT-23-5
     'C7834': (180, (0, 0)),        # SN74LVC1G126DBVR  SOT-23-5
     'C23654': (270, (0, 0)),       # SN74LVC1G125DBVR  SOT-23-5, drawn pin 1 bottom-left
-    'C150746': (180, (0, 0)),      # AP7333-33SAG-7    SOT-23
+    'C5446': (180, (0, 0)),        # XC6206P332MR-G    SOT-23
     'C131339': (180, (2.0, 0)),    # JST B3B-PH-K-S: pin 1 on the other side, origin at the body centre
     'C428721': (0, (2.5, 0)),      # Amass XT30UPB-M (pin 1 = -)
 }

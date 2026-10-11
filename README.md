@@ -51,7 +51,7 @@ This board connects Unitree J288 / S288 brushless digital servos to an M5Stack c
 | 記号 | 部品 | 値 | LCSC |
 | --- | --- | --- | --- |
 | U1 | 74LVC1G14 (SOT-23-5) | シュミットトリガ・インバータ | C7835 |
-| U2 | AP7333-33SAG (SOT-23) | 3.3 V レギュレータ | C150746 |
+| U2 | XC6206P332MR (SOT-23) | 3.3 V レギュレータ | C5446 |
 | U3 | 74LVC1G126 (SOT-23-5) | バスドライバ | C7834 |
 | U4 | 74LVC1G125 (SOT-23-5) | 受信バッファ | C23654 |
 | D1 | RB751V-40 (SOD-323) | ショットキーダイオード | C7502691 |

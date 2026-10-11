@@ -1778,10 +1778,11 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:AP7384-33SA"
+		(symbol "Regulator_Linear:XC6206PxxxMR"
 			(pin_names
 				(offset 0.254)
 			)
+			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
@@ -1792,7 +1793,7 @@
 					)
 				)
 			)
-			(property "Value" "AP7384-33SA"
+			(property "Value" "XC6206PxxxMR"
 				(at 0 3.175 0)
 				(effects
 					(font
@@ -1801,25 +1802,17 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 				(at 0 5.715 0)
 				(effects
-					(font italic
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP7384.pdf"
-				(at 0 -1.27 0)
-				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "50mA LDO Regulator Fixed Positive"
+			(property "Datasheet" "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1828,7 +1821,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_description" "50mA Low Dropout Voltage Regulator, Fixed Output 3.3V, Wide Input Voltage Range 40V, SOT-23"
+			(property "Description" "Positive 60-250mA Low Dropout Regulator, Fixed Output, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1837,7 +1830,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23*"
+			(property "ki_keywords" "Torex LDO Voltage Regulator Fixed Positive"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1846,7 +1839,16 @@
 					(hide yes)
 				)
 			)
-			(symbol "AP7384-33SA_0_1"
+			(property "ki_fp_filters" "SOT?23?3*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "XC6206PxxxMR_0_1"
 				(rectangle
 					(start -5.08 1.905)
 					(end 5.08 -5.08)
@@ -1859,11 +1861,29 @@
 					)
 				)
 			)
-			(symbol "AP7384-33SA_1_1"
+			(symbol "XC6206PxxxMR_1_1"
 				(pin power_in line
 					(at -7.62 0 0)
 					(length 2.54)
 					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1896,25 +1916,8 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3V"
 			(power)
@@ -6559,7 +6562,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:AP7384-33SA")
+		(lib_id "Regulator_Linear:XC6206PxxxMR")
 		(at 101.6 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6576,7 +6579,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "AP7333-33SAG"
+		(property "Value" "XC6206P332MR"
 			(at 99.695 149.86 0)
 			(effects
 				(font
@@ -6594,7 +6597,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP7384.pdf"
+		(property "Datasheet" "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
 			(at 101.6 154.94 0)
 			(effects
 				(font
@@ -6603,7 +6606,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C150746"
+		(property "LCSC" "C5446"
 			(at 101.6 154.94 0)
 			(effects
 				(font
