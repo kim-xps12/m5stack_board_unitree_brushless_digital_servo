@@ -3,6 +3,8 @@ production/
 *.zip
 # 3D models fetched from EasyEDA (see README)
 Library.3dshapes/
+# local working files: archived generator scripts, checks, downloaded data (see work/README.md)
+work/
 # KiCad: lock files, caches, per-user settings and backups
 *.lck
 fp-info-cache
