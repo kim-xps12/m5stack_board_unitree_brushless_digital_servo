@@ -1,0 +1,212 @@
+(footprint "HY2.0-4P_1x04_P2.00mm_Vertical"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "HY2.0 (Grove compatible) wafer, 1x04, P2.00mm, vertical, through hole, Megastar ZX-HY2.0-4PZZ (LCSC C7429580). Pin 1 on the right with the latch side toward +Y, origin at the centre of the pin row (same as the JLCPCB land pattern). https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2306191411_Megastar-ZX-HY2-0-4PZZ_C7429580.pdf")
+	(tags "connector HY2.0 Grove 1x04 P2.00mm vertical")
+	(property "Reference" "REF**"
+		(at 0 -3.4 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "ZX-HY2.0-4PZZ"
+		(at 0 4.2 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2306191411_Megastar-ZX-HY2-0-4PZZ_C7429580.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "HY2.0-4P vertical wafer, Megastar ZX-HY2.0-4PZZ"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -3.8 3.01)
+		(end -5.11 3.01)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -5.11 3.01)
+		(end -5.11 -2.31)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -5.11 -2.31)
+		(end 5.11 -2.31)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 5.11 -2.31)
+		(end 5.11 3.01)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 5.11 3.01)
+		(end 3.8 3.01)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 3.8 3.01)
+		(end 3.8 2.2)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 3.8 2.2)
+		(end -3.8 2.2)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -3.8 2.2)
+		(end -3.8 3.01)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_poly
+		(pts
+			(xy 5.35 0)
+			(xy 5.95 -0.35)
+			(xy 5.95 0.35)
+		)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+	)
+	(fp_poly
+		(pts
+			(xy -5 -2.2)
+			(xy 2.5 -2.2)
+			(xy 3 -1.6)
+			(xy 3.5 -2.2)
+			(xy 5 -2.2)
+			(xy 5 2.9)
+			(xy -5 2.9)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.9 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -5.5 -2.7)
+		(end 5.5 3.4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(pad "1" thru_hole roundrect
+		(at 3 0)
+		(size 1.35 1.75)
+		(drill 0.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.185185)
+	)
+	(pad "2" thru_hole oval
+		(at 1 0)
+		(size 1.35 1.75)
+		(drill 0.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "3" thru_hole oval
+		(at -1 0)
+		(size 1.35 1.75)
+		(drill 0.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "4" thru_hole oval
+		(at -3 0)
+		(size 1.35 1.75)
+		(drill 0.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Library.3dshapes/CONN-TH_4P-P2.00_HX20020-4A_2.step"
+		(offset (xyz 0 -0.35 -0.3))
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
