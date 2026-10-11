@@ -45,11 +45,13 @@ quiet < "$OUT/export.txt" | tail -1
 
 # Optional: the JLCPCB (EasyEDA) land patterns are not in the repository (see work/README.md)
 if [ -f work/jlc/verify_cpl.py ]; then
-    echo "== CPL: JLCPCB land patterns vs board pads (NG over 0.25 mm)"
+    # Land pattern differences (hand-soldering pads, a wider lead span) shift pads by up to 0.3 mm; a wrong
+    # rotation or origin moves them by a pin pitch (0.9 mm or more)
+    echo "== CPL: JLCPCB land patterns vs board pads (NG over 0.4 mm)"
     "$PY" work/jlc/verify_cpl.py "$PWD/work/jlc" $N.kicad_pcb production/bom_jlcpcb.csv production/cpl_jlcpcb.csv \
         > "$OUT/cpl_raw.txt" 2>&1 || { fail=1; quiet < "$OUT/cpl_raw.txt" | tail -3; }
     grep "max pad-centre error" "$OUT/cpl_raw.txt" > "$OUT/cpl.txt"
-    awk '{ e = $(NF - 1); if (e > m) m = e; if (e > 0.25) { print "NG " $0; bad = 1 } }
+    awk '{ e = $(NF - 1); if (e > m) m = e; if (e > 0.4) { print "NG " $0; bad = 1 } }
          END { printf "%d parts, max pad-centre error %.3f mm\n", NR, m; exit bad }' "$OUT/cpl.txt" || fail=1
 else
     echo "== CPL check skipped (work/jlc/ not present)"
