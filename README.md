@@ -2,10 +2,10 @@
 
 ## About
 M5Stack (AtomS3R など) から Unitree J288 / S288 ブラシレスデジタルサーボを操作するためのオリジナル基板です．KiCad 9 で設計しました．
-サーボのバスは 1 本の信号線で送受信する半二重の TTL バス (8N1，標準 6 Mbps) です．送信と受信の切り替えは，基板が TX 信号から自動で行います．マイコン側に方向制御用のピンは要りません．ロジックはすべて 3.3 V です．
+サーボのバスは 1 本の信号線で送受信する半二重の TTL バス (8N1，4 Mbps) です．この基板は 4 Mbps だけを扱います．サーボのボーレートは，使う前に Unitree の公式ツールで 4 Mbps に変更しておいてください．送信と受信の切り替えは，基板が TX 信号から自動で行います．マイコン側に方向制御用のピンは要りません．ロジックはすべて 3.3 V です．
 JLCPCB の部品実装 (PCBA) にそのまま発注できるように作っています．
 
-This board connects Unitree J288 / S288 brushless digital servos to an M5Stack controller (e.g. AtomS3R). The servo bus is a single-wire, half-duplex TTL bus (8N1, 6 Mbps by default). The board switches between transmit and receive by itself from the TX signal, so the controller needs no direction pin. All logic runs at 3.3 V. The design is ready for JLCPCB assembly (PCBA).
+This board connects Unitree J288 / S288 brushless digital servos to an M5Stack controller (e.g. AtomS3R). The servo bus is a single-wire, half-duplex TTL bus (8N1, 4 Mbps). The board supports 4 Mbps only: change the baud rate of the servos to 4 Mbps with the official Unitree tool before use. The board switches between transmit and receive by itself from the TX signal, so the controller needs no direction pin. All logic runs at 3.3 V. The design is ready for JLCPCB assembly (PCBA).
 
 ## Appearance
 
@@ -40,7 +40,7 @@ This board connects Unitree J288 / S288 brushless digital servos to an M5Stack c
 | サーボ電源 | J1 から入力．Unitree の推奨値は J288 が 25.2 V，S288 が 12.6 V (最低 6.4 V) |
 | 入力コンデンサ | 100 µF 50 V (C7) |
 | ポートの電流 | 1 ピン 2 A (JST PH)．全力運転の J288 (最大 1.92 A) は 1 ポートに 1 台まで |
-| 通信 | 半二重 TTL，3.3 V |
+| 通信 | 半二重 TTL，3.3 V，4 Mbps (8N1) のみ．サーボは使う前に公式ツールで 4 Mbps に設定する |
 
 ## Layout
 
@@ -66,7 +66,7 @@ This board connects Unitree J288 / S288 brushless digital servos to an M5Stack c
 
 ## Example code
 
-サンプルコードは準備中です．AtomS3R では UART を TX = G2，RX = G1 に割り当て，サーボのボーレートで通信します．
+サンプルコードは準備中です．AtomS3R では UART を TX = G2，RX = G1 に割り当て，4 Mbps (4,000,000 bps) で通信します．
 
 ## JLCPCB で製造する
 
