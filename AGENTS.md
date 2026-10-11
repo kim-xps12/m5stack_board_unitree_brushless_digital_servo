@@ -22,7 +22,7 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 - `check_all.sh` は次を順に実行する。
   - DRC (回路図との整合を含む)、ERC
   - 全部品の全ピンのネットとピンの機能、LCSC 番号、コネクタのシルクの位置 (`tools/checks/pincheck.py` の仕様表と照合)
-  - ベタの塗り直し漏れ、ビアによるベタの出っ張り、取り付け穴まわりの銅
+  - ベタの塗り直し漏れ、ベタの外形と他ネットの間に残る細い帯、ビアによるベタの出っ張り、取り付け穴まわりの銅
   - JLCPCB の発注ファイルの出力 (`tools/jlcpcb_export.py`)
   - CPL の照合 (`work/jlc/` があるときだけ)
 - 結果は `production/checks/` に残る。

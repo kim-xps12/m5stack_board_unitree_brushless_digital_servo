@@ -36,6 +36,9 @@ check pincheck tools/checks/pincheck.py $N.kicad_pcb $N.kicad_sch
 echo "== zone fills saved = fresh refill"
 check fillcheck tools/checks/fillcheck.py $N.kicad_pcb
 
+echo "== thin pour strips between a zone outline and other nets' items"
+check slivercheck tools/checks/slivercheck.py $N.kicad_pcb
+
 echo "== GND vias bulging into other nets' pour clearance"
 check viacheck tools/checks/viacheck.py $N.kicad_pcb
 
