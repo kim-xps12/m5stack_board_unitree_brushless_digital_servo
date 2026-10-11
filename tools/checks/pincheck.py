@@ -24,7 +24,7 @@ NC = None   # a pin that must stay unconnected
 PORT = {'1': ('GND', 'Pin_1'), '2': ('/BAT', 'Pin_2'), '3': ('/signal', 'Pin_3')}   # servo header: 1 GND, 2 VCC, 3 SIGNAL
 SPEC = {
     # connectors
-    'J1': ('C428721', {'1': ('GND', 'Pin_1'), '2': ('/BAT', 'Pin_2')}),                      # XT30UPB-M: 1 = -, 2 = +
+    'J1': ('C428721', {'1': ('GND', 'Pin_1'), '2': ('/BAT_IN', 'Pin_2')}),                   # XT30UPB-M: 1 = -, 2 = +
     'J2': ('C7429580', {'1': ('GND', 'Pin_1'), '2': ('+5V', 'Pin_2'),                        # Grove: black, red,
                         '3': ('/TX', 'Pin_3'), '4': ('/RX', 'Pin_4')}),                      # yellow = host TX, white = host RX
     'J3': ('C131339', PORT), 'J4': ('C131339', PORT), 'J5': ('C131339', PORT),
@@ -37,6 +37,8 @@ SPEC = {
                      '4': ('/BUS', ''), '5': ('+3.3V', 'VCC')}),
     'U4': ('C23654', {'1': ('/TXEN', ''), '2': ('/BUS', ''), '3': ('GND', 'GND'),            # 74LVC1G125: 1 /OE, 2 A, 4 Y
                       '4': ('/RX', ''), '5': ('+3.3V', 'VCC')}),
+    # fuse: J1 + -> F1 -> BAT (holder = two Keystone 3557 clips; the fuse itself is user supplied)
+    'F1': ('C2680614', {'1': ('/BAT_IN', ''), '2': ('/BAT', '')}),
     # polarised parts
     'D1': ('C7502691', {'1': ('/TX', 'K'), '2': ('/RC', 'A')}),                              # cathode on TX: TX low pulls RC low
     'C7': ('C3445238', {'1': ('/BAT', ''), '2': ('GND', '')}),                               # pin 1 = +

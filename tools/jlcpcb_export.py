@@ -37,6 +37,12 @@ CORRECTION = {
     'C131339': (180, (2.0, 0)),    # JST B3B-PH-K-S: pin 1 on the other side, origin at the body centre
     'C428721': (0, (2.5, 0)),      # Amass XT30UPB-M (pin 1 = -)
 }
+# Footprints that JLCPCB assembles as several parts: LCSC -> (comment, [(designator suffix, pad number, rotation to add)]).
+# F1, the MINI blade fuse holder, is two Keystone 3557 clips; each sits at the middle of its two tails. Clip A
+# (pads 1) faces +x in the footprint, i.e. the JLCPCB (EasyEDA) land pattern turned by 180 degrees.
+SPLIT = {
+    'C2680614': ('Keystone 3557 fuse clip', [('A', '1', 180), ('B', '2', 0)]),
+}
 GERBER_LAYERS = ['F.Cu', 'B.Cu', 'F.Paste', 'B.Paste', 'F.Silkscreen', 'B.Silkscreen', 'F.Mask', 'B.Mask',
                  'Edge.Cuts']
 
@@ -56,6 +62,19 @@ def cpl_row(fp):
     return [fp.GetReference(), '%.4fmm' % x, '%.4fmm' % -y, side, '%g' % angle]
 
 
+def split_rows(fp):
+    """(designator, CPL row) of every JLCPCB part in a SPLIT footprint."""
+    rows = []
+    for suffix, number, rot in SPLIT[lcsc(fp)][1]:
+        pads = [p for p in fp.Pads() if p.GetNumber() == number]
+        x = sum(pcbnew.ToMM(p.GetPosition().x) for p in pads) / len(pads)
+        y = sum(pcbnew.ToMM(p.GetPosition().y) for p in pads) / len(pads)
+        ref = fp.GetReference() + suffix
+        side = 'Bottom' if fp.IsFlipped() else 'Top'
+        rows.append((ref, [ref, '%.4fmm' % x, '%.4fmm' % -y, side, '%g' % ((fp.GetOrientationDegrees() + rot) % 360)]))
+    return rows
+
+
 def main():
     board = pcbnew.LoadBoard(BOARD)
     os.makedirs(OUT, exist_ok=True)
@@ -70,6 +89,12 @@ def main():
         part = lcsc(fp)
         if not part:
             missing.append(fp.GetReference())
+            continue
+        if part in SPLIT:
+            key = (SPLIT[part][0], str(fp.GetFPID().GetLibItemName()), part)
+            for ref, row in split_rows(fp):
+                bom.setdefault(key, []).append(ref)
+                cpl.append(row)
             continue
         key = (fp.GetValue(), str(fp.GetFPID().GetLibItemName()), part)
         bom.setdefault(key, []).append(fp.GetReference())

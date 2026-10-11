@@ -1,0 +1,325 @@
+(footprint "Fuseholder_Blade_Mini_Keystone_3557x2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "MINI blade fuse (Littelfuse 297 / Bussmann ATM, ISO 8820-3) holder made of two Keystone 3557 universal clips (LCSC C2680614) 9.73 mm apart, per the Keystone mounting layout for MINI fuses. Pad 1 = clip A, pad 2 = clip B. JLCPCB places the clips as <ref>A and <ref>B (tools/jlcpcb_export.py). 3D model: EasyEDA C2680614")
+	(tags "fuse holder blade mini ATM Keystone 3557")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "84d49025-d451-4ff9-ad12-82854c709418")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Fuseholder_Blade_Mini_Keystone_3557x2"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "c4e38ab1-2701-4e2f-89c5-d230b1cd08ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.keyelco.com/userAssets/file/M65p41.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1bd5f68-ddf8-47ec-a2e2-be5c296bfb95")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "MINI blade fuse holder, 2 x Keystone 3557"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7b92518e-69ab-42d3-85cc-ac64b574139e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -6.455 -1.905)
+		(end -1.765 -1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bce0f8b8-720f-4a15-88be-b741c780263b")
+	)
+	(fp_line
+		(start -1.765 -1.905)
+		(end -1.765 1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1b4d4124-61e1-47d7-b801-42508e030a63")
+	)
+	(fp_line
+		(start -1.765 1.905)
+		(end -6.455 1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0ca3d1cb-830d-44c8-8d0b-be470e5f6660")
+	)
+	(fp_line
+		(start -6.455 1.905)
+		(end -6.455 -1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "820a6017-f204-4cf6-a987-d791bf851773")
+	)
+	(fp_line
+		(start 1.765 -1.905)
+		(end 6.455 -1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "628b07b4-802c-424c-a164-87ec90b4376c")
+	)
+	(fp_line
+		(start 6.455 -1.905)
+		(end 6.455 1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8c106a6d-bc76-420c-8158-572f8c48449e")
+	)
+	(fp_line
+		(start 6.455 1.905)
+		(end 1.765 1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dba565e5-428e-400b-8a01-8f4f8b71906d")
+	)
+	(fp_line
+		(start 1.765 1.905)
+		(end 1.765 -1.905)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f158307c-2c6f-42bf-8d8a-0aa97d7315a9")
+	)
+	(fp_line
+		(start -5.45 -1.9)
+		(end 5.45 -1.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a1785695-ca3c-471d-ad5f-bcdf64e0b6c7")
+	)
+	(fp_line
+		(start 5.45 -1.9)
+		(end 5.45 1.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a0f3b92e-3cdf-494a-9b93-55d9054a2c48")
+	)
+	(fp_line
+		(start 5.45 1.9)
+		(end -5.45 1.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b2995fca-ea2b-4ebb-97d6-3021724a159b")
+	)
+	(fp_line
+		(start -5.45 1.9)
+		(end -5.45 -1.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3ee6a82f-7ac6-4567-a638-4d3d264729db")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "5d04108d-905f-46e1-8ed5-d86b75b38859")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -6.605 -2.95)
+		(end 6.605 -2.95)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8eb4c330-f70b-4f25-8ce8-39ba395b8607")
+	)
+	(fp_line
+		(start 6.605 -2.95)
+		(end 6.605 2.95)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "13a19ff5-8aa8-4d96-afcb-2eb73230099d")
+	)
+	(fp_line
+		(start 6.605 2.95)
+		(end -6.605 2.95)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0c1682bd-1383-4369-a858-4da5528fa2b0")
+	)
+	(fp_line
+		(start -6.605 2.95)
+		(end -6.605 -2.95)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1530caf4-16b1-4003-b132-58e2011dcfde")
+	)
+	(fp_line
+		(start -6.705 -3)
+		(end 6.705 -3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8ce30bc1-2cd8-4ffc-8d8b-4fd58f1140e5")
+	)
+	(fp_line
+		(start 6.705 -3)
+		(end 6.705 3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "366fc7d5-9c3b-436b-92d8-5fec3877f9c5")
+	)
+	(fp_line
+		(start 6.705 3)
+		(end -6.705 3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c7fc74a6-3da0-4807-8894-b147c111c7a5")
+	)
+	(fp_line
+		(start -6.705 3)
+		(end -6.705 -3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a3b5135f-efd1-4d5e-9bfc-f82bc73e909d")
+	)
+	(pad "1" thru_hole circle
+		(at -4.865 -1.7)
+		(size 2.1 2.1)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "115ab6b5-f344-476f-88d6-be0131011d9d")
+	)
+	(pad "1" thru_hole circle
+		(at -4.865 1.7)
+		(size 2.1 2.1)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "9f2be825-1df5-4fb8-ab87-f45dfa2576cd")
+	)
+	(pad "2" thru_hole circle
+		(at 4.865 -1.7)
+		(size 2.1 2.1)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "0f3bc89f-d8ca-4bcf-9aee-d64fae6cc7f3")
+	)
+	(pad "2" thru_hole circle
+		(at 4.865 1.7)
+		(size 2.1 2.1)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "1b2d0ccf-74e6-43fd-a3a9-6dd20f5af1a0")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Library.3dshapes/CONN-TH_3557.step"
+		(offset
+			(xyz 0.99 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 270)
+		)
+	)
+	(model "${KIPRJMOD}/Library.3dshapes/CONN-TH_3557.step"
+		(offset
+			(xyz -0.99 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)
