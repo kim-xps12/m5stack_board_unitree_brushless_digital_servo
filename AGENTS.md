@@ -59,6 +59,7 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 
 ## Git
 
-- ブランチは `main` だけで、remote はない。push の前に、remote (リポジトリ名と公開範囲) をユーザに確認する。
+- remote は GitHub の `kim-xps12/m5stack_board_unitree_brushless_digital_servo` (Public)。push はユーザに頼まれたときだけ行う。
+- 作業はブランチで行い、PR で `main` に入れる。PR のマージはユーザがブラウザで行う。
 - コミットはユーザに頼まれたときだけ作る。1 コミット = 1 つの論理的な変更。
 - コミットメッセージは英語で書く。件名は命令形、本文に理由を書く。
