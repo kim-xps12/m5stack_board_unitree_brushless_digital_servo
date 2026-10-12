@@ -6159,7 +6159,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:Fuseholder_Blade_Mini_Keystone_3557x2"
+		(property "Footprint" "Library:Fuseholder_Blade_Mini_XFCN_XF-508P-B-B"
 			(at 44.45 139.7 0)
 			(effects
 				(font
@@ -6177,7 +6177,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MINI blade fuse (Littelfuse 297 / Bussmann ATM, user supplied) in two Keystone 3557 clips"
+		(property "Description" "MINI blade fuse (Littelfuse 297 / Bussmann ATM, user supplied) in an XFCN XF-508P-B-B holder"
 			(at 44.45 139.7 0)
 			(effects
 				(font
@@ -6186,7 +6186,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2680614"
+		(property "LCSC" "C19727305"
 			(at 44.45 139.7 0)
 			(effects
 				(font

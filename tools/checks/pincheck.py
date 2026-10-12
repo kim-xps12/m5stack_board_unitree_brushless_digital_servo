@@ -37,8 +37,8 @@ SPEC = {
                      '4': ('/BUS', ''), '5': ('+3.3V', 'VCC')}),
     'U4': ('C23654', {'1': ('/TXEN', ''), '2': ('/BUS', ''), '3': ('GND', 'GND'),            # 74LVC1G125: 1 /OE, 2 A, 4 Y
                       '4': ('/RX', ''), '5': ('+3.3V', 'VCC')}),
-    # fuse: J1 + -> F1 -> BAT (holder = two Keystone 3557 clips; the fuse itself is user supplied)
-    'F1': ('C2680614', {'1': ('/BAT_IN', ''), '2': ('/BAT', '')}),
+    # fuse: J1 + -> F1 -> BAT (holder XFCN XF-508P-B-B; the fuse itself is user supplied)
+    'F1': ('C19727305', {'1': ('/BAT_IN', ''), '2': ('/BAT', '')}),
     # polarised parts
     'D1': ('C7502691', {'1': ('/TX', 'K'), '2': ('/RC', 'A')}),                              # cathode on TX: TX low pulls RC low
     'C7': ('C3445238', {'1': ('/BAT', ''), '2': ('GND', '')}),                               # pin 1 = +

@@ -1,0 +1,234 @@
+(footprint "Fuseholder_Blade_Mini_XFCN_XF-508P-B-B"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "MINI blade fuse (Littelfuse 297 / Bussmann ATM, ISO 8820-3) holder XFCN XF-508P-B-B (LCSC C19727305): insulated block with two clips, 16.0 x 6.7 x 7.35 mm, holes 9.80 x 3.40 mm. Pad 1 = one clip, pad 2 = the other. 3D model: EasyEDA C19727305")
+	(tags "fuse holder blade mini ATM XFCN XF-508P")
+	(property "Reference" "REF**"
+		(at 0 -4.6 0)
+		(layer "F.SilkS")
+		(uuid "57025838-de75-4cd1-991a-0726912d79b3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Fuseholder_Blade_Mini_XFCN_XF-508P-B-B"
+		(at 0 4.6 0)
+		(layer "F.Fab")
+		(uuid "f0770d90-aac9-471f-9867-773340ca53af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2312251802_XFCN-XF-508P-B-B_C19727305.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "45d58a4b-c5d2-4545-8fe0-52453aeae7c3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "MINI blade fuse holder, XFCN XF-508P-B-B"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e3b3d97d-336f-46ec-a2ac-04b8ab14e06b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -8 -3.35)
+		(end 8 -3.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f94f7e2e-9302-410c-87f2-7c8d35ae90f3")
+	)
+	(fp_line
+		(start 8 -3.35)
+		(end 8 3.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6e507aa1-0ad1-4b94-a901-574960887878")
+	)
+	(fp_line
+		(start 8 3.35)
+		(end -8 3.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "01fdcf70-8765-491a-9bf1-8f9c9426a118")
+	)
+	(fp_line
+		(start -8 3.35)
+		(end -8 -3.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "684bc3f5-38a6-4d2c-8a21-0d2da3e424f3")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "bc22bdad-4f24-4648-9ebb-14cdf97b0783")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -8.15 -3.5)
+		(end 8.15 -3.5)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "66a734d4-9042-486e-b091-893cb26d17fa")
+	)
+	(fp_line
+		(start 8.15 -3.5)
+		(end 8.15 3.5)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dd780ccf-f440-4325-857f-0dc275239d33")
+	)
+	(fp_line
+		(start 8.15 3.5)
+		(end -8.15 3.5)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c99aae39-aa70-4f4b-9e99-96a369f99052")
+	)
+	(fp_line
+		(start -8.15 3.5)
+		(end -8.15 -3.5)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f9716b53-585f-4156-89f9-9d88f0578b83")
+	)
+	(fp_line
+		(start -8.25 -3.6)
+		(end 8.25 -3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b84717f2-d9be-4d81-948d-9c7f24d18930")
+	)
+	(fp_line
+		(start 8.25 -3.6)
+		(end 8.25 3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "50267d95-c7ab-4f49-ac98-528793b4fc34")
+	)
+	(fp_line
+		(start 8.25 3.6)
+		(end -8.25 3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d2a1a5c9-3502-4059-9405-8769dce1607f")
+	)
+	(fp_line
+		(start -8.25 3.6)
+		(end -8.25 -3.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d2ce4272-7542-48fb-a4fa-99d9d8e1fb4a")
+	)
+	(pad "1" thru_hole circle
+		(at -4.9 -1.7)
+		(size 2.5 2.5)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "1b2f19c1-9d0e-44ca-9f0d-f16e3a7f75d7")
+	)
+	(pad "1" thru_hole circle
+		(at -4.9 1.7)
+		(size 2.5 2.5)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "1eacc9e7-1fd7-4eb5-8acf-d1fddd815f7c")
+	)
+	(pad "2" thru_hole circle
+		(at 4.9 -1.7)
+		(size 2.5 2.5)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "ba04acd5-4c33-4379-a653-59dd28603f7c")
+	)
+	(pad "2" thru_hole circle
+		(at 4.9 1.7)
+		(size 2.5 2.5)
+		(drill 1.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "b1bcd726-d89b-488b-a5aa-78289847e86d")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Library.3dshapes/FUSE-TH_4P-L16.0-W6.7.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

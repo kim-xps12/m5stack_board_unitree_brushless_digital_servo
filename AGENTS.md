@@ -41,6 +41,7 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 - **品番やフットプリントを変えたら**: `tools/jlcpcb_export.py` の `CORRECTION` を求め直す (`docs/design.md` §5)。
 - **部品、ピン配置、ネットを意図して変えたら**: `tools/checks/pincheck.py` の仕様表 (`SPEC`) も、データシートを見て直す。今の状態から写さない。
 - **DRC と ERC**: 警告も含めて 0 件を保つ。
+- **JLCPCB に出すファイル**: `tools/jlcpcb_export.py` の出力 (`production/` の `gerber_jlcpcb.zip`、`bom_jlcpcb.csv`、`cpl_jlcpcb.csv`) だけを使う。KiCad のプラグインや基板ファイルの直接アップロードは、品番ごとの回転と原点の補正がないので使わない。
 - **`check_all.sh` では見つけられない制約**: 守るか、変えるならユーザに確認する。
   - 部品本体 (F.Fab) を基板端から 2.5 mm 以上離す。
   - ベタや配線に 90° の入り隅や矩形の切り欠きを作らず、45° で面取りする。

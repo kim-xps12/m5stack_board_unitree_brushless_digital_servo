@@ -25,7 +25,7 @@ This board connects Unitree J288 / S288 brushless digital servos to an M5Stack c
 | --- | --- | --- |
 | J2 (M5Stack と接続) | Grove，HY2.0-4P | Rx = 基板からの受信データ (M5Stack の RX へ)，Tx = M5Stack の TX から，V = 5 V，G = GND |
 | J1 (サーボ電源) | XT30UPB-M | + = BAT (F1 を通ってサーボへ)，− = GND |
-| F1 (ヒューズ) | ミニ平型ヒューズのホルダー (Keystone 3557 × 2) | J1 の + とサーボの BAT の間．ヒューズは付属しません |
+| F1 (ヒューズ) | ミニ平型ヒューズのホルダー (XFCN XF-508P-B-B) | J1 の + とサーボの BAT の間．ヒューズは付属しません |
 | J3〜J7 (サーボ) | JST PH 2.0 3 ピン | 1 = GND，2 = BAT，3 = Signal (サーボ本体のコネクタと同じ番号) |
 | TP1 | テストパッド | 送信イネーブル信号 (TXEN) の確認用 |
 
@@ -65,7 +65,7 @@ This board connects Unitree J288 / S288 brushless digital servos to an M5Stack c
 | C6 | 0603，C0G | 100 pF | C14858 |
 | C7 | 電解コンデンサ 6.3 × 7.7 mm | 100 µF 50 V | C3445238 |
 | J1 | XT30UPB-M | | C428721 |
-| F1 | Keystone 3557 × 2 (ミニ平型ヒューズのホルダー) | ヒューズは付属しない | C2680614 |
+| F1 | XFCN XF-508P-B-B (ミニ平型ヒューズのホルダー，絶縁ブロック付き) | ヒューズは付属しない | C19727305 |
 | J2 | ZX-HY2.0-4PZZ | | C7429580 |
 | J3〜J7 | JST B3B-PH-K-S(LF)(SN) | | C131339 |
 
@@ -87,24 +87,25 @@ This board connects Unitree J288 / S288 brushless digital servos to an M5Stack c
 
 部品本体はすべて基板端から 2.5 mm 以上離してあるので，Economic PCBA でエッジレールなしで発注できます．
 JLCPCB の製造能力 (2 層，1 oz) の推奨値は DRC のルールファイル `m5stack_board_unitree_brushless_digital_servo.kicad_dru` に入れてあり，KiCad の DRC でそのまま確認できます．
-F1 のホルダーはクリップ 2 個なので，BOM と CPL では F1A と F1B の 2 部品として出力します．ヒューズ本体は JLCPCB では実装しません．
-発注時は，JLCPCB の配置プレビューで部品の向き (D1，IC の 1 番ピン，C7 の極性，コネクタ，F1 のクリップ) を確認してください．
+F1 は BOM ではホルダーとして出力します (コメント「XF-508P-B-B fuse holder (fuse not included)」)．ヒューズ本体は JLCPCB では実装しません．
+KiCad のプラグインや，基板ファイルをそのまま JLCPCB にアップロードする方法は使わないでください．部品ごとの回転と原点の補正が入らず，C7 の極性や J3〜J7 の向きが逆になります．
+発注時は，JLCPCB の配置プレビューで部品の向き (D1，IC の 1 番ピン，C7 の極性，コネクタ) を確認してください．
 
-To make the files for JLCPCB assembly (Gerber, BOM, CPL), run `tools/jlcpcb_export.py` with the Python bundled with KiCad (command above). The files are written to `production/`. Every component body is at least 2.5 mm from the board edge, so Economic PCBA works without edge rails. The DRC rule file holds JLCPCB's recommended values (2 layers, 1 oz). The fuse holder F1 is two clips, so the BOM and the CPL list it as F1A and F1B; the fuse itself is not assembled. Check the placement preview when ordering.
+To make the files for JLCPCB assembly (Gerber, BOM, CPL), run `tools/jlcpcb_export.py` with the Python bundled with KiCad (command above). The files are written to `production/`. Every component body is at least 2.5 mm from the board edge, so Economic PCBA works without edge rails. The DRC rule file holds JLCPCB's recommended values (2 layers, 1 oz). The BOM lists F1 as the fuse holder only; the fuse itself is not assembled. Do not use KiCad plugins or a direct upload of the board file: they miss the per-part rotation and origin corrections (C7 polarity, J3-J7 orientation). Check the placement preview when ordering.
 
 ## NOTE
-J1 (XT30UPB)，J2 (HY2.0-4P)，F1 (ミニ平型ヒューズのホルダー，Keystone 3557 のクリップ 2 個) のフットプリントは，プロジェクト内のライブラリ `Library.pretty` (`fp-lib-table` に登録済み) にあります．
+J1 (XT30UPB)，J2 (HY2.0-4P)，F1 (ミニ平型ヒューズのホルダー XFCN XF-508P-B-B) のフットプリントは，プロジェクト内のライブラリ `Library.pretty` (`fp-lib-table` に登録済み) にあります．
 ほかの部品も，KiCad 標準ライブラリのフットプリントをシルクの線幅だけ 0.15 mm に太らせたコピーを `Library.pretty` に置いて使っています (JLCPCB では 0.15 mm 未満の線や文字が判読できないため)．PH コネクタはパッド幅も 1.25 mm に広げています (JLCPCB 推奨のランド幅 0.25 mm)．
-J1，J2，F1 の 3D モデル (STEP) はリポジトリに含めていません．3D ビューアや STEP 出力で表示するには，リポジトリのルートで次のコマンドを実行してください．LCSC の部品 C428721 (J1)，C7429580 (J2)，C2680614 (F1 のクリップ) の 3D モデルを EasyEDA から取得し，`Library.3dshapes/` に保存します (easyeda2kicad 1.0.1 で確認)．
+J1，J2，F1 の 3D モデル (STEP) はリポジトリに含めていません．3D ビューアや STEP 出力で表示するには，リポジトリのルートで次のコマンドを実行してください．LCSC の部品 C428721 (J1)，C7429580 (J2)，C19727305 (F1) の 3D モデルを EasyEDA から取得し，`Library.3dshapes/` に保存します (easyeda2kicad 1.0.1 で確認)．
 
 ```bash
 pip install easyeda2kicad
-easyeda2kicad --3d --lcsc_id C428721 C7429580 C2680614 --output Library
+easyeda2kicad --3d --lcsc_id C428721 C7429580 C19727305 --output Library
 ```
 
-The footprints of J1 (XT30UPB), J2 (HY2.0-4P) and F1 (MINI blade fuse holder made of two Keystone 3557 clips) are in the project library `Library.pretty` (registered in `fp-lib-table`).
+The footprints of J1 (XT30UPB), J2 (HY2.0-4P) and F1 (MINI blade fuse holder XFCN XF-508P-B-B) are in the project library `Library.pretty` (registered in `fp-lib-table`).
 The other parts also use copies of the KiCad library footprints in `Library.pretty`, changed only in the silkscreen width (0.15 mm), because JLCPCB cannot print legible lines or characters thinner than 0.15 mm. The PH connector copy also has 1.25 mm wide pads (JLCPCB's recommended 0.25 mm annular ring).
-The 3D models (STEP) of J1, J2 and F1 are not included in this repository. To show them in the 3D viewer or in a STEP export, run the commands above in the repository root. They download the 3D models of LCSC parts C428721 (J1), C7429580 (J2) and C2680614 (the F1 clips) from EasyEDA into `Library.3dshapes/` (checked with easyeda2kicad 1.0.1).
+The 3D models (STEP) of J1, J2 and F1 are not included in this repository. To show them in the 3D viewer or in a STEP export, run the commands above in the repository root. They download the 3D models of LCSC parts C428721 (J1), C7429580 (J2) and C19727305 (F1) from EasyEDA into `Library.3dshapes/` (checked with easyeda2kicad 1.0.1).
 
 ## Disclaimer
 MITライセンスでの公開です．本設計において生じた一切の損害等について作者は責任を負いません．予めご了承ください．
