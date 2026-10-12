@@ -1332,6 +1332,142 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers
 				(hide yes)
@@ -5930,7 +6066,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 30.48 142.24 180)
+		(at 25.4 142.24 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5938,7 +6074,7 @@
 		(dnp no)
 		(uuid "b8d418d0-e454-4ff1-8014-23a6bc9af6b3")
 		(property "Reference" "J1"
-			(at 28.575 135.89 0)
+			(at 23.495 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5947,7 +6083,7 @@
 			)
 		)
 		(property "Value" "XT30UPB-M"
-			(at 28.575 147.32 0)
+			(at 23.495 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5957,7 +6093,7 @@
 			)
 		)
 		(property "Footprint" "Library:AMASS_XT30UPB-M_1x02_P5.0mm_Vertical"
-			(at 30.48 142.24 0)
+			(at 25.4 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5966,7 +6102,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 30.48 142.24 0)
+			(at 25.4 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5975,7 +6111,7 @@
 			)
 		)
 		(property "LCSC" "C428721"
-			(at 30.48 142.24 0)
+			(at 25.4 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5999,8 +6135,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Fuse")
+		(at 44.45 139.7 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "442d11b3-ff60-4bcb-a2ec-5d503b5780b5")
+		(property "Reference" "F1"
+			(at 44.45 136.525 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MINI 15A"
+			(at 44.45 142.875 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Library:Fuseholder_Blade_Mini_XFCN_XF-508P-B-B"
+			(at 44.45 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_297_mini32v.pdf"
+			(at 44.45 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "MINI blade fuse (Littelfuse 297 / Bussmann ATM, user supplied) in an XFCN XF-508P-B-B holder"
+			(at 44.45 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C19727305"
+			(at 44.45 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "78a3c3a1-b733-4b26-b870-0aade97529ae")
+		)
+		(pin "2"
+			(uuid "94f6727e-63ec-42c1-a99d-bd6f11efd45b")
+		)
+		(instances
+			(project "m5stack_board_unitree_brushless_digital_servo"
+				(path "/29a88121-680b-4e5a-b555-96da8c0e0c77"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 50.8 143.51 0)
+		(at 53.34 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6008,7 +6220,7 @@
 		(dnp no)
 		(uuid "1a7ea6c9-eb1e-5dc8-8823-27d2b5427242")
 		(property "Reference" "C7"
-			(at 52.705 142.875 0)
+			(at 55.245 142.875 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6017,7 +6229,7 @@
 			)
 		)
 		(property "Value" "100u 50V"
-			(at 52.705 144.78 0)
+			(at 55.245 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6026,7 +6238,7 @@
 			)
 		)
 		(property "Footprint" "Library:CP_Elec_6.3x7.7"
-			(at 50.8 143.51 0)
+			(at 53.34 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6035,7 +6247,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 50.8 143.51 0)
+			(at 53.34 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6044,7 +6256,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 50.8 143.51 0)
+			(at 53.34 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6053,7 +6265,7 @@
 			)
 		)
 		(property "LCSC" "C3445238"
-			(at 50.8 143.51 0)
+			(at 53.34 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6078,8 +6290,8 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 139.7)
-			(xy 50.8 139.7)
+			(xy 30.48 139.7)
+			(xy 40.64 139.7)
 		)
 		(stroke
 			(width 0)
@@ -6089,7 +6301,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 139.7)
+			(xy 53.34 139.7)
 			(xy 243.84 139.7)
 		)
 		(stroke
@@ -6154,13 +6366,35 @@
 		(uuid "b7137097-0c95-5c5e-9aa2-50d8e10209bc")
 	)
 	(junction
-		(at 50.8 139.7)
+		(at 53.34 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c590e6f4-7719-590f-9940-e90f29b3dadb")
 	)
+	(wire
+		(pts
+			(xy 48.26 139.7)
+			(xy 53.34 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da89501e-6349-4190-a107-b56e830cae6f")
+	)
+	(label "BAT_IN"
+		(at 31.75 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "379f7aeb-9bec-4696-923a-889e73b9a914")
+	)
 	(label "BAT"
-		(at 58.42 139.7 0)
+		(at 49.53 139.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6172,8 +6406,8 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 142.24)
-			(xy 38.1 142.24)
+			(xy 30.48 142.24)
+			(xy 33.02 142.24)
 		)
 		(stroke
 			(width 0)
@@ -6183,7 +6417,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 38.1 142.24 0)
+		(at 33.02 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -6191,7 +6425,7 @@
 		(dnp no)
 		(uuid "5d0c108a-92d8-5a56-b365-3169f99de07f")
 		(property "Reference" "#PWR119"
-			(at 38.1 148.59 0)
+			(at 33.02 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6200,7 +6434,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 38.1 146.05 0)
+			(at 33.02 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6208,7 +6442,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 142.24 0)
+			(at 33.02 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6217,7 +6451,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 142.24 0)
+			(at 33.02 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6226,7 +6460,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 38.1 142.24 0)
+			(at 33.02 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6248,7 +6482,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 50.8 147.32 0)
+		(at 53.34 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -6256,7 +6490,7 @@
 		(dnp no)
 		(uuid "af5ab7d4-22c6-5532-8d98-81b94a1b440c")
 		(property "Reference" "#PWR120"
-			(at 50.8 153.67 0)
+			(at 53.34 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6265,7 +6499,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 50.8 151.13 0)
+			(at 53.34 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6273,7 +6507,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 147.32 0)
+			(at 53.34 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6282,7 +6516,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 147.32 0)
+			(at 53.34 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6291,7 +6525,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 50.8 147.32 0)
+			(at 53.34 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6323,7 +6557,7 @@
 		)
 		(uuid "2341ab27-fad7-5075-8a1f-185a5254c9f4")
 	)
-	(text "Servo power\nJ1: XT30 (2 = +)"
+	(text "Servo power\nJ1: XT30 (2 = +)\nF1: MINI blade fuse, 15 A"
 		(exclude_from_sim no)
 		(at 19.05 127 0)
 		(effects
@@ -6785,7 +7019,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
+		(property "Value" "470"
 			(at 133.985 160.02 0)
 			(effects
 				(font
@@ -6821,7 +7055,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" "C23179"
 			(at 132.08 158.75 0)
 			(effects
 				(font

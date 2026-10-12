@@ -22,7 +22,7 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 - `check_all.sh` は次を順に実行する。
   - DRC (回路図との整合を含む)、ERC
   - 全部品の全ピンのネットとピンの機能、LCSC 番号、コネクタのシルクの位置 (`tools/checks/pincheck.py` の仕様表と照合)
-  - ベタの塗り直し漏れ、ビアによるベタの出っ張り、取り付け穴まわりの銅
+  - ベタの塗り直し漏れ、ベタの外形と他ネットの間に残る細い帯、ビアによるベタの出っ張り、取り付け穴まわりの銅
   - JLCPCB の発注ファイルの出力 (`tools/jlcpcb_export.py`)
   - CPL の照合 (`work/jlc/` があるときだけ)
 - 結果は `production/checks/` に残る。
@@ -41,11 +41,12 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 - **品番やフットプリントを変えたら**: `tools/jlcpcb_export.py` の `CORRECTION` を求め直す (`docs/design.md` §5)。
 - **部品、ピン配置、ネットを意図して変えたら**: `tools/checks/pincheck.py` の仕様表 (`SPEC`) も、データシートを見て直す。今の状態から写さない。
 - **DRC と ERC**: 警告も含めて 0 件を保つ。
+- **JLCPCB に出すファイル**: `tools/jlcpcb_export.py` の出力 (`production/` の `gerber_jlcpcb.zip`、`bom_jlcpcb.csv`、`cpl_jlcpcb.csv`) だけを使う。KiCad のプラグインや基板ファイルの直接アップロードは、品番ごとの回転と原点の補正がないので使わない。
 - **`check_all.sh` では見つけられない制約**: 守るか、変えるならユーザに確認する。
   - 部品本体 (F.Fab) を基板端から 2.5 mm 以上離す。
   - ベタや配線に 90° の入り隅や矩形の切り欠きを作らず、45° で面取りする。
   - 通信速度は 4 Mbps だけを扱う。文書やサンプルに別の速度を書かない (サーボは使う前に公式ツールで 4 Mbps に設定する前提)。
-  - 外形、取り付け穴、J1〜J7 のピン番号は変えない。JP1 (BAT–+5V のジャンパ) は戻さない。
+  - 外形 (50 × 35 mm、角 R1)、取り付け穴、J1〜J7 のピン番号は変えない。JP1 (BAT–+5V のジャンパ) は戻さない。
   - 回路図は左から右へ信号の流れで描き、線をラベルで飛ばさない (`docs/design.md` §6)。
 
 ## やりとり
@@ -58,7 +59,7 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 
 ## Git
 
-- ブランチは `main` だけで、remote はない。push の前に、remote (リポジトリ名と公開範囲) をユーザに確認する。
+- remote は GitHub の `kim-xps12/m5stack_board_unitree_brushless_digital_servo` (Public)。push はユーザに頼まれたときだけ行う。
+- 作業はブランチで行い、PR で `main` に入れる。PR のマージはユーザがブラウザで行う。
 - コミットはユーザに頼まれたときだけ作る。1 コミット = 1 つの論理的な変更。
 - コミットメッセージは英語で書く。件名は命令形、本文に理由を書く。
-- DYNAMIXEL 版から残っている `docs/` の画像と `example_m5core2_dynamixel_arduino_ide/` は扱いが決まっていない。消したりコミットしたりしない。

@@ -37,6 +37,10 @@ CORRECTION = {
     'C131339': (180, (2.0, 0)),    # JST B3B-PH-K-S: pin 1 on the other side, origin at the body centre
     'C428721': (0, (2.5, 0)),      # Amass XT30UPB-M (pin 1 = -)
 }
+# BOM comment instead of the value, where the value names something JLCPCB does not supply
+COMMENT = {
+    'C19727305': 'XF-508P-B-B fuse holder (fuse not included)',   # F1: the value is the user's fuse
+}
 GERBER_LAYERS = ['F.Cu', 'B.Cu', 'F.Paste', 'B.Paste', 'F.Silkscreen', 'B.Silkscreen', 'F.Mask', 'B.Mask',
                  'Edge.Cuts']
 
@@ -71,7 +75,7 @@ def main():
         if not part:
             missing.append(fp.GetReference())
             continue
-        key = (fp.GetValue(), str(fp.GetFPID().GetLibItemName()), part)
+        key = (COMMENT.get(part, fp.GetValue()), str(fp.GetFPID().GetLibItemName()), part)
         bom.setdefault(key, []).append(fp.GetReference())
         if not attr & pcbnew.FP_EXCLUDE_FROM_POS_FILES:
             cpl.append(cpl_row(fp))
