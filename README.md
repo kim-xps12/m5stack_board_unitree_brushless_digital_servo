@@ -39,7 +39,7 @@ This board connects Unitree J288 / S288 brushless digital servos to an M5Stack c
 
 | 項目 | 値 |
 | --- | --- |
-| 外形 | 50 × 35 mm，M3 取り付け穴 × 4 (40 × 25 mm 間隔) |
+| 外形 | 50 × 35 mm (角 R3)，M3 取り付け穴 × 4 (40 × 25 mm 間隔) |
 | サーボ電源 | J1 から入力．Unitree の推奨値は J288 が 25.2 V，S288 が 12.6 V (最低 6.4 V) |
 | ヒューズ | ミニ平型 (Littelfuse MINI 297 / Bussmann ATM 相当，32 V)．J288 × 5 台で 15 A．付属しない |
 | 入力コンデンサ | 100 µF 50 V (C7，F1 の後ろ) |
