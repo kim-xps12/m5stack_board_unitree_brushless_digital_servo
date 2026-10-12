@@ -62,4 +62,3 @@ tools/render_images.sh --readme   # 中身が変わった README の画像を do
 - ブランチは `main` だけで、remote はない。push の前に、remote (リポジトリ名と公開範囲) をユーザに確認する。
 - コミットはユーザに頼まれたときだけ作る。1 コミット = 1 つの論理的な変更。
 - コミットメッセージは英語で書く。件名は命令形、本文に理由を書く。
-- DYNAMIXEL 版から残っている `docs/` の画像と `example_m5core2_dynamixel_arduino_ide/` は扱いが決まっていない。消したりコミットしたりしない。
