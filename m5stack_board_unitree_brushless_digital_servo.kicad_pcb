@@ -3636,7 +3636,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2k"
+		(property "Value" "470"
 			(at 0 1.43 270)
 			(layer "F.Fab")
 			(uuid "8f16f4cc-92e3-41e4-abe7-418181c935e8")
@@ -3671,7 +3671,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C4190"
+		(property "LCSC" "C23179"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
