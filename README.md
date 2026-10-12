@@ -90,8 +90,9 @@ JLCPCB の製造能力 (2 層，1 oz) の推奨値は DRC のルールファイ�
 F1 は BOM ではホルダーとして出力します (コメント「XF-508P-B-B fuse holder (fuse not included)」)．ヒューズ本体は JLCPCB では実装しません．
 KiCad のプラグインや，基板ファイルをそのまま JLCPCB にアップロードする方法は使わないでください．部品ごとの回転と原点の補正が入らず，C7 の極性や J3〜J7 の向きが逆になります．
 発注時は，JLCPCB の配置プレビューで部品の向き (D1，IC の 1 番ピン，C7 の極性，コネクタ) を確認してください．
+J3〜J7 はプレビューで箱として表示されます．箱の左下に 1 番ピンの目印「[」が見え，箱の右にシルクの枠がはみ出していなければ，正しい向きです (逆向きだと箱が 1.1 mm 左にずれます)．
 
-To make the files for JLCPCB assembly (Gerber, BOM, CPL), run `tools/jlcpcb_export.py` with the Python bundled with KiCad (command above). The files are written to `production/`. Every component body is at least 2.5 mm from the board edge, so Economic PCBA works without edge rails. The DRC rule file holds JLCPCB's recommended values (2 layers, 1 oz). The BOM lists F1 as the fuse holder only; the fuse itself is not assembled. Do not use KiCad plugins or a direct upload of the board file: they miss the per-part rotation and origin corrections (C7 polarity, J3-J7 orientation). Check the placement preview when ordering.
+To make the files for JLCPCB assembly (Gerber, BOM, CPL), run `tools/jlcpcb_export.py` with the Python bundled with KiCad (command above). The files are written to `production/`. Every component body is at least 2.5 mm from the board edge, so Economic PCBA works without edge rails. The DRC rule file holds JLCPCB's recommended values (2 layers, 1 oz). The BOM lists F1 as the fuse holder only; the fuse itself is not assembled. Do not use KiCad plugins or a direct upload of the board file: they miss the per-part rotation and origin corrections (C7 polarity, J3-J7 orientation). Check the placement preview when ordering. J3-J7 show as plain boxes there: they face the right way when the pin-1 mark "[" shows at the lower left of each box and no silkscreen outline sticks out on its right (a reversed connector shifts its box 1.1 mm to the left).
 
 ## NOTE
 J1 (XT30UPB)，J2 (HY2.0-4P)，F1 (ミニ平型ヒューズのホルダー XFCN XF-508P-B-B) のフットプリントは，プロジェクト内のライブラリ `Library.pretty` (`fp-lib-table` に登録済み) にあります．

@@ -59,6 +59,11 @@ if [ -f work/jlc/verify_cpl.py ]; then
     grep "max pad-centre error" "$OUT/cpl_raw.txt" > "$OUT/cpl.txt"
     awk '{ e = $(NF - 1); if (e > m) m = e; if (e > 0.4) { print "NG " $0; bad = 1 } }
          END { printf "%d parts, max pad-centre error %.3f mm\n", NR, m; exit bad }' "$OUT/cpl.txt" || fail=1
+    # The pads of an inline connector also match when it is turned by 180 degrees; its off-centre body does not
+    echo "== CPL: JLCPCB courtyard vs board courtyard, centre (NG over 0.4 mm)"
+    grep "courtyard-centre error" "$OUT/cpl_raw.txt" > "$OUT/cpl_body.txt"
+    awk '{ e = $(NF - 1); if (e > m) m = e; if (e > 0.4) { print "NG " $0; bad = 1 } }
+         END { printf "%d parts, max courtyard-centre error %.3f mm\n", NR, m; exit bad || NR == 0 }' "$OUT/cpl_body.txt" || fail=1
 else
     echo "== CPL check skipped (work/jlc/ not present)"
 fi
