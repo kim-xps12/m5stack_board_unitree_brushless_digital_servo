@@ -9,7 +9,7 @@ M5Stack と Unitree J288 / S288 サーボをつなぐ基板の KiCad 9 プロジ
 | `docs/design.md` | 部品、ピン配置、配置、銅箔、回路図、製造ルールを変える前。決めたことと理由、レビューでの指摘と対応 |
 | `README.md` | 仕様、ピン配置、BOM (利用者向け) |
 | `work/README.md` | 作業ファイル (git 管理外。ない環境もある) |
-| `digital_servo/atoms3r/docs/ttl_board_redesign.md` (作者の別リポジトリ) | 送信の自動切り替えの定数 (R1、C6、D1、U1) やタイミングを変えるとき |
+| 作者の別リポジトリ [`m5stack_board_unitree_servo_bench`](https://github.com/kim-xps12/m5stack_board_unitree_servo_bench) の `atoms3r/docs/ttl_board_redesign.md` | 送信の自動切り替えの定数 (R1、C6、D1、U1) やタイミングを変えるとき |
 
 ## コマンド
 
