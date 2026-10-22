@@ -2,7 +2,7 @@
 
 この基板の設計で決めたことと、その理由、レビューでの指摘と対応をまとめます。
 
-- 回路の考え方、タイミングの計算、測定の結果は、作者の別リポジトリ [`m5stack_board_unitree_servo_bench`](https://github.com/kim-xps12/m5stack_board_unitree_servo_bench) にある設計メモ [`atoms3r/docs/ttl_board_redesign.md`](https://github.com/kim-xps12/m5stack_board_unitree_servo_bench/blob/main/atoms3r/docs/ttl_board_redesign.md) に詳しく書いてあります (§6 回路、§6.3 タイミング、§6.7 KiCad での実装、§6.8 JLCPCB)。
+- 回路の考え方、タイミングの計算、測定の結果は、作者の別リポジトリ [`m5stack_example_unitree_servo`](https://github.com/kim-xps12/m5stack_example_unitree_servo) にある設計メモ [`atoms3r/docs/ttl_board_redesign.md`](https://github.com/kim-xps12/m5stack_example_unitree_servo/blob/main/atoms3r/docs/ttl_board_redesign.md) に詳しく書いてあります (§6 回路、§6.3 タイミング、§6.7 KiCad での実装、§6.8 JLCPCB)。
 - この基板は DYNAMIXEL 用の基板 (<https://github.com/kim-xps12/m5stack_board_dynamixel_ttl_rs3485>) を複製し、回路を作り直したものです。
 
 ## 1. 仕様
